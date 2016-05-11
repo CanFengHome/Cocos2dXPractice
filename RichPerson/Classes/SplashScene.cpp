@@ -7,6 +7,7 @@
 //
 
 #include "SplashScene.h"
+#include "MenuScene.h"
 
 USING_NS_CC;
 
@@ -55,20 +56,27 @@ bool SplashLayer::init()
     addChild(pFu1Sprite);
     
     float delayTime = 0.2f;
-    float unitTime = 0.8f;
+    float unitTime = 0.5f;
+    
+    auto actionFinish = []()
+    {
+        Director::getInstance()->replaceScene(MenuScene::create());
+    };
     
     pFu1Sprite->runAction(Sequence::create(DelayTime::create(delayTime),
                                            MoveBy::create(unitTime*3.0f, Vec2(-spriteWidth*3.0f, 0.0f)),
-                                           NULL));
+                                           DelayTime::create(delayTime*4.0f),
+                                           CallFunc::create(actionFinish),
+                                           nullptr));
     pPoSprite->runAction(Sequence::create(DelayTime::create(delayTime),
                                           MoveBy::create(unitTime, Vec2(spriteWidth, 0.0f)),
-                                          NULL));
+                                          nullptr));
     pFu2Sprite->runAction(Sequence::create(DelayTime::create(delayTime*2.0f+unitTime),
                                            MoveBy::create(unitTime, Vec2(spriteWidth, 0.0f)),
-                                           NULL));
+                                           nullptr));
     pWengSprite->runAction(Sequence::create(DelayTime::create(delayTime*3.0f+unitTime*2.0f),
                                             MoveBy::create(unitTime, Vec2(spriteWidth, 0.0f)),
-                                            NULL));
+                                            nullptr));
     
     return true;
 }

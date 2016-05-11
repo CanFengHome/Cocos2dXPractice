@@ -50,6 +50,7 @@
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
 		901BEFC71CE1A3AF00DB2874 /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 901BEFC61CE1A2F400DB2874 /* libcocos2d iOS.a */; };
 		901BEFCB1CE1C31B00DB2874 /* SplashScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 901BEFC91CE1C31B00DB2874 /* SplashScene.cpp */; };
+		901BEFDC1CE1D5BC00DB2874 /* MenuScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 901BEFDA1CE1D5BC00DB2874 /* MenuScene.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -126,6 +127,9 @@
 		901BEFBE1CE1A2F300DB2874 /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../../../cocos2d/build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
 		901BEFC91CE1C31B00DB2874 /* SplashScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SplashScene.cpp; sourceTree = "<group>"; };
 		901BEFCA1CE1C31B00DB2874 /* SplashScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScene.h; sourceTree = "<group>"; };
+		901BEFDA1CE1D5BC00DB2874 /* MenuScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuScene.cpp; sourceTree = "<group>"; };
+		901BEFDB1CE1D5BC00DB2874 /* MenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuScene.h; sourceTree = "<group>"; };
+		901BEFEE1CE1FE5F00DB2874 /* CommonDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonDefine.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -259,6 +263,9 @@
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
 				901BEFC91CE1C31B00DB2874 /* SplashScene.cpp */,
 				901BEFCA1CE1C31B00DB2874 /* SplashScene.h */,
+				901BEFDA1CE1D5BC00DB2874 /* MenuScene.cpp */,
+				901BEFDB1CE1D5BC00DB2874 /* MenuScene.h */,
+				901BEFEE1CE1FE5F00DB2874 /* CommonDefine.h */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -452,6 +459,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				901BEFDC1CE1D5BC00DB2874 /* MenuScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				901BEFCB1CE1C31B00DB2874 /* SplashScene.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
