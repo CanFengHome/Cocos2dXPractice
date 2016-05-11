@@ -78,7 +78,7 @@ bool PopupLayer::initWithTitleAndContent(const std::string& msgTitle, const std:
     pBtnCancel->setTitleText("取消");
 
     pBgSprite->setScale(0.0f);
-    pBgSprite->runAction(ScaleTo::create(0.5f, 1.0f));
+    pBgSprite->runAction(ScaleTo::create(0.3f, 1.0f));
     
     auto listener = EventListenerTouchOneByOne::create();
     listener->setSwallowTouches(true);
