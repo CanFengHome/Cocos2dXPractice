@@ -58,19 +58,18 @@ bool MapChooseLayer::init()
     int pageCount = 3;
     for (int i = 0; i < pageCount; ++i)
     {
-        Layout* layout = Layout::create();
-        layout->setContentSize(Size(winSize.width, 300.0f));
+        Layout* pLayout = Layout::create();
+        pLayout->setContentSize(Size(winSize.width, 300.0f));
         
         std::string strMapImg(__String::createWithFormat("res/map/map_%d.png", i+1)->getCString());
         Button* pBtnMap = Button::create(strMapImg, strMapImg);
         pBtnMap->setPressedActionEnabled(true);
         pBtnMap->addTouchEventListener(CC_CALLBACK_2(MapChooseLayer::btnMapCallback, this));
-        layout->addChild(pBtnMap);
-        pBtnMap->setPosition(layout->getContentSize()*0.5f);
+        pLayout->addChild(pBtnMap);
+        pBtnMap->setPosition(pLayout->getContentSize()*0.5f);
         
-        m_pPageView->insertPage(layout,i);
+        m_pPageView->insertPage(pLayout,i);
     }
-
     
     return true;
 }
