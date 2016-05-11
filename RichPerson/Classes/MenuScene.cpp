@@ -9,6 +9,7 @@
 #include "MenuScene.h"
 #include "CommonDefine.h"
 #include "PopupLayer.h"
+#include "MapChooseScene.h"
 
 USING_NS_CC;
 using namespace ui;
@@ -103,7 +104,7 @@ void MenuLayer::btnSiglePersonCallback(Ref *pSender, Widget::TouchEventType pTou
 {
     if (pTouchEventType == Widget::TouchEventType::ENDED)
     {
-        
+        Director::getInstance()->replaceScene(MapChooseScene::create());
     }
 }
 

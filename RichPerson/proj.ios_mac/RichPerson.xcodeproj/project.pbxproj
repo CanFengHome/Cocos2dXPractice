@@ -52,6 +52,7 @@
 		901BEFCB1CE1C31B00DB2874 /* SplashScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 901BEFC91CE1C31B00DB2874 /* SplashScene.cpp */; };
 		901BEFDC1CE1D5BC00DB2874 /* MenuScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 901BEFDA1CE1D5BC00DB2874 /* MenuScene.cpp */; };
 		90352FC81CE2C6FF009562DF /* PopupLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 90352FC61CE2C6FF009562DF /* PopupLayer.cpp */; };
+		90352FDD1CE2E7A2009562DF /* MapChooseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 90352FDB1CE2E7A2009562DF /* MapChooseScene.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -133,6 +134,8 @@
 		901BEFEE1CE1FE5F00DB2874 /* CommonDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonDefine.h; sourceTree = "<group>"; };
 		90352FC61CE2C6FF009562DF /* PopupLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PopupLayer.cpp; sourceTree = "<group>"; };
 		90352FC71CE2C6FF009562DF /* PopupLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupLayer.h; sourceTree = "<group>"; };
+		90352FDB1CE2E7A2009562DF /* MapChooseScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapChooseScene.cpp; sourceTree = "<group>"; };
+		90352FDC1CE2E7A2009562DF /* MapChooseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapChooseScene.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -262,6 +265,7 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				90352FDA1CE2E50D009562DF /* scene_select */,
 				90352FC31CE2C6E8009562DF /* pop_lyr */,
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
@@ -338,6 +342,15 @@
 				90352FC71CE2C6FF009562DF /* PopupLayer.h */,
 			);
 			name = pop_lyr;
+			sourceTree = "<group>";
+		};
+		90352FDA1CE2E50D009562DF /* scene_select */ = {
+			isa = PBXGroup;
+			children = (
+				90352FDB1CE2E7A2009562DF /* MapChooseScene.cpp */,
+				90352FDC1CE2E7A2009562DF /* MapChooseScene.h */,
+			);
+			name = scene_select;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -471,6 +484,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90352FDD1CE2E7A2009562DF /* MapChooseScene.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				901BEFDC1CE1D5BC00DB2874 /* MenuScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
