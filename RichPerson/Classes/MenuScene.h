@@ -26,6 +26,9 @@ private:
     void btnSoundCallback(cocos2d::Ref *pSender, cocos2d::ui::Widget::TouchEventType pTouchEventType);
     void btnLoadGameCallback(cocos2d::Ref *pSender, cocos2d::ui::Widget::TouchEventType pTouchEventType);
     void btnExitGameCallback(cocos2d::Ref *pSender, cocos2d::ui::Widget::TouchEventType pTouchEventType);
+    
+private:
+    void btnOkCallbackInPopupLayer();
 };
 
 class MenuScene : public cocos2d::Scene

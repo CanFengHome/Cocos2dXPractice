@@ -8,6 +8,7 @@
 
 #include "MenuScene.h"
 #include "CommonDefine.h"
+#include "PopupLayer.h"
 
 USING_NS_CC;
 using namespace ui;
@@ -150,11 +151,20 @@ void MenuLayer::btnExitGameCallback(Ref *pSender, Widget::TouchEventType pTouchE
 {
     if (pTouchEventType == Widget::TouchEventType::ENDED)
     {
-        
+        PopupLayer* pPopupLyr = PopupLayer::createMsgWindow("提示消息", "你要退出吗？");
+        pPopupLyr->setOkEventListener(CC_CALLBACK_0(MenuLayer::btnOkCallbackInPopupLayer, this));
+        PopupLayer::showPopupLayer(pPopupLyr);
     }
 }
 
-
+void MenuLayer::btnOkCallbackInPopupLayer()
+{
+    Director::getInstance()->end();
+    
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+    exit(0);
+#endif
+}
 
 
 
