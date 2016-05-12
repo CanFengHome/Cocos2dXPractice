@@ -42,8 +42,9 @@ bool MapLayer::initWithMapIndex(int mapIndex)
     {
         return false;
     }
+    m_iMapIndex = mapIndex;
 
-    if (!addTiledMap(mapIndex))
+    if (!addTiledMap())
     {
         return false;
     }
@@ -54,9 +55,9 @@ bool MapLayer::initWithMapIndex(int mapIndex)
     return true;
 }
 
-bool MapLayer::addTiledMap(int mapIndex)
+bool MapLayer::addTiledMap()
 {
-    string strMapTmxFile = __String::createWithFormat("res/map/map_%d.tmx", mapIndex+1)->getCString();
+    string strMapTmxFile = __String::createWithFormat("res/map/map_%d.tmx", m_iMapIndex+1)->getCString();
     if (!FileUtils::getInstance()->isFileExist(strMapTmxFile))
     {
         return false;
