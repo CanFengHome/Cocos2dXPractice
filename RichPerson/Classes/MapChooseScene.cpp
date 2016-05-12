@@ -8,6 +8,7 @@
 
 #include "MapChooseScene.h"
 #include "MenuScene.h"
+#include "MapScene.h"
 
 USING_NS_CC;
 using namespace cocos2d::ui;
@@ -35,12 +36,12 @@ bool MapChooseLayer::init()
     Size winSize = Director::getInstance()->getWinSize();
     
     // bg sprite
-    Sprite* pBgSprite = Sprite::create("res/map/stage_background.png");
+    Sprite* pBgSprite = Sprite::create("res/map/stage_background2.png");
     pBgSprite->setPosition(winSize*0.5f);
     addChild(pBgSprite);
     
     // back button
-    Button* pGoBackBtn = Button::create("res/images/back_normal.png","res/mages/back_pressed.png");
+    Button* pGoBackBtn = Button::create("res/images/back_normal.png","res/images/back_pressed.png");
     pGoBackBtn->setPressedActionEnabled(true);
     pBgSprite->addChild(pGoBackBtn);
     Size btnBackSize = pGoBackBtn->getContentSize();
@@ -70,6 +71,7 @@ bool MapChooseLayer::init()
         
         m_pPageView->insertPage(pLayout,i);
     }
+    m_pPageView->scrollToPage(0);
     
     return true;
 }
@@ -92,7 +94,11 @@ void MapChooseLayer::btnMapCallback(Ref *pSender, Widget::TouchEventType pTouchE
         }
         
         ssize_t currPageIndex = m_pPageView->getCurrentPageIndex();
-        log("current page index: %ld", currPageIndex);
+        Scene* pMapScene = MapLayer::createWithMapIndex((int)currPageIndex);
+        if (pMapScene)
+        {
+            Director::getInstance()->replaceScene(pMapScene);
+        }
     }
 }
 
