@@ -2,6 +2,8 @@
 #include "SplashScene.h"
 #include "MenuScene.h"
 
+#include "MapScene.h"
+
 USING_NS_CC;
 
 AppDelegate::AppDelegate() {
@@ -53,7 +55,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     // create a scene. it's an autorelease object
 //    auto scene = SplashScene::create();
-    auto scene = MenuScene::create();
+//    auto scene = MenuScene::create();
+    auto scene = MapLayer::createWithMapIndex(0);
+
 
     // run
     director->runWithScene(scene);
