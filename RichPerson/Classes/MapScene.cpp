@@ -41,6 +41,7 @@ MapLayer::~MapLayer()
 {
     CC_SAFE_RELEASE_NULL(m_pMapWayData);
     CC_SAFE_RELEASE_NULL(m_pGameCtrl);
+    _eventDispatcher->removeAllEventListeners();
 }
 
 bool MapLayer::initWithMapIndex(int mapIndex)
