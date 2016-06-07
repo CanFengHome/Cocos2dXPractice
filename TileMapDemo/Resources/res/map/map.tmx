@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-up" width="50" height="50" tilewidth="32" tileheight="32" nextobjectid="5">
+ <tileset firstgid="1" name="tmw_desert_spacing" tilewidth="32" tileheight="32" spacing="1" margin="1" tilecount="48">
+  <image source="tmw_desert_spacing.png" width="265" height="199"/>
+ </tileset>
+ <tileset firstgid="49" name="meta_tiles" tilewidth="32" tileheight="32" spacing="1" margin="1" tilecount="2">
+  <image source="meta_tiles.png" width="67" height="34"/>
+  <tile id="0">
+   <properties>
+    <property name="collidable" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="background" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzt0zEWgyAUBECMlUmlPruEI+T+x5OGTpFOSKaYgm73fTaGECIAAAAAAAAAtxqSR4WxgawlU/Ks8Goga8mcLAVbJz1q79V6j7yPs//fS4+c8x2O9/3prMev7zxbG8j6b74XbyjZAblpH3w=
+  </data>
+ </layer>
+ <objectgroup name="objects">
+  <object id="3" name="PlayerInitPos" x="256" y="1344" width="32" height="32"/>
+ </objectgroup>
+ <layer name="meta" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzt0rEJACAMRcGs5P7L2dtICokf7iC9L7EKAAAAAAAAgGmrMT/TkSWl4/bOxI7kf6WD186duwEdG0xSDr4=
+  </data>
+ </layer>
+</map>
